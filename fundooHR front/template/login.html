@@ -36,6 +36,8 @@
                             <div ng-message="minlength">Message must be over 1 character</div>
                             <div ng-message="maxlength">Message must not exceed 6 characters</div>
                             <div ng-show="error">{{error}}</div>
+                            <div ng-show="userError" ng-bind="userError"></div>
+
                         </div>
                     </div>
 
