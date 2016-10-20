@@ -12,7 +12,7 @@ router.post('/', function(req, res) {
       res.send(data);
     console.log(data);
     }else {
-      //res.send(data)
+      res.send(data)
       console.log("error"+JSON.stringify(data));
     }
   });
@@ -21,12 +21,13 @@ router.post('/', function(req, res) {
 var authCredential  = function (data,callback){
 
   firebase.auth().signInWithEmailAndPassword(data.email, data.password).catch(function(err) {
-    console.log("Catch::"+err.message);
-          //callback({"error":err.message});
+        callback({"error":err.message});
       })
       .then(function(data) {
-        console.log("Then::",data);
-          //callback({"success":data});
+        //When Password is wrong again my promise will enter into then() block but data will be undefined
+        if(data){
+        callback({"success":data});
+        }
       });
 }
 
