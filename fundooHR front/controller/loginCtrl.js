@@ -18,9 +18,11 @@ angular.module('myApp')
                 if(data.success!==undefined)
                 {
                   var enc = MyService.myEncrypt(obj);
+                  $scope.dataLoading=true;
                   $localStorage.LoginData = enc;
                   $location.path("/dashboard/empPersonal");
                 }else{
+                  $scope.dataLoading=false;
                   $scope.userError=data.error;
                 }
                   console.log('Data posted successfully');
