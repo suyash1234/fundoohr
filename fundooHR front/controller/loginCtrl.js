@@ -4,7 +4,7 @@
  * purpose : get data from firebase and encode it
  */
 angular.module('myApp')
-    .controller("loginCtrl", function($scope, $location, MyService, authService, $localStorage,$http) {
+    .controller("loginCtrl", function($scope, $location, MyService,$localStorage,$http) {
 
         /* this function called on clicking from buttton
          * use authService to call the auth function and get all the firebase data from that function
@@ -14,7 +14,7 @@ angular.module('myApp')
         $scope.login = function() {
           var obj=$scope.data;
           $scope.dataLoading=true;
-          $http.post("http://localhost:3021/auth",obj).success(function(data, status) {
+          $http.post("http://localhost:3022/auth",obj).success(function(data, status) {
             console.log(data)
                 if(data.success!==undefined)
                 {

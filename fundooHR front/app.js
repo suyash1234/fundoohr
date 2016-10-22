@@ -5,7 +5,7 @@
  */
 
 /*create a module myApp and inject the services*/
-var app = angular.module('myApp', ['ui.router', 'firebase', 'ngMessages', 'ngStorage', 'base64']);
+var app = angular.module('myApp', ['ui.router','ngMessages', 'ngStorage', 'base64']);
 
 /*use config to configure different states and pass services in config function*/
 app.config(function($stateProvider, $urlRouterProvider) {

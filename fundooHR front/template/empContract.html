@@ -9,22 +9,57 @@
                 <div class="table-responsive">
                     <table class="table table-bordered table-hover table-striped">
                         <thead>
-                            <tr>
-                                <th>Emp ID #</th>
-                                <th>Emp Name</th>
-                                <th>Emp Tech</th>
-                                <th>Date</th>
-                                <th>Time</th>
-                            </tr>
+                          <tr>
+                            <th>BL Start Date</th>
+                            <th>Comp Contract Initiated</th>
+                            <th>Comp Contract Signed</th>
+                            <th> Company End Date</th>
+                            <th> Company Start Date</th>
+                            <th>Contract Sign Date</th>
+                            <th> Engg Contract Initiated</th>
+                            <th> Engg Contract Signed</th>
+                            <th> Engg ID</th>
+                            <th> Engg Status</th>
+                            <th> Fellowship Period</th>
+                            <th> Hiring City</th>
+                            <th> Initiate Transfer</th>
+                            <th> Name</th>
+                            <th> Original Certificates Collected</th>
+                            <th> Other Documents</th>
+                            <th> Provisional Certificate</th>
+                            <th> Required Certificate Submission</th>
+                            <th> Sr No</th>
+                            <th> Transfer Date</th>
+                            <th> Transfer Status</th>
+                            <th> refe</th>
+                          </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="data in table">
-                                <td>{{data.emp_id}}</td>
-                                <td>{{data.emp_name}}</td>
-                                <td>{{data.emp_tech}}</td>
-                                <td>{{data.date}}</td>
-                                <td>{{data.time}}</td>
-                            </tr>
+                          <tr ng-repeat="data in obj">
+                          <td ng-bind="data['BL Start Date']"></td>
+                            <td ng-bind="data['Comp Contract Initiated']"></td>
+                            <td ng-bind="data['Comp Contract Signed']"></td>
+                            <td ng-bind="data['Company End Date']"></td>
+                            <td ng-bind="data['Company Start Date']"></td>
+                            <td ng-bind="data['Contract Sign Date']"></td>
+                            <td ng-bind="data['Engg Contract Initiated']"></td>
+                            <td ng-bind="data['Engg Contract Signed']"></td>
+                            <td ng-bind="data['Engg ID']"></td>
+                            <td ng-bind="data[' Engg Status']"></td>
+                            <td ng-bind="data['Fellowship Period']"></td>
+                            <td ng-bind="data[' Hiring City']"></td>
+                            <td ng-bind="data['Initiate Transfer']"></td>
+                            <td ng-bind="data['Name']"></td>
+                            <td ng-bind="data['Original Certificates Collected']"></td>
+                            <td ng-bind="data['Other Documents']"></td>
+                            <td ng-bind="data['Provisional Certificate']"></td>
+                            <td ng-bind="data['Required Certificate Submission']"></td>
+                            <td ng-bind="data['Sr No']"></td>
+                            <td ng-bind="data['Transfer Date']"></td>
+                            <td ng-bind="data['Transfer Status']"></td>
+                            <td ng-bind="data['refe']"></td>
+
+                          </tr>
 
                         </tbody>
                     </table>

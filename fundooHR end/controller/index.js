@@ -4,6 +4,7 @@ var router=express.Router();
 
 router.get('/',function(req,res){
   console.log("it's working");
+  
 })
 router.use('/firebase',require('./firebaseCtrl.js'));
 router.use('/auth',require('./firebaseAuth.js'));

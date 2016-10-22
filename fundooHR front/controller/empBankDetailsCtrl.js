@@ -1,6 +1,6 @@
 angular.module("myApp").controller("empBankDetailsCtrl", function($scope,$http) {
-  $http.get('apps.json')
-      .then(function(res) {
-          $scope.tables = res.data;
-      })
-});
+  $http.get("http://localhost:3023/firebase/fundoohr").success(function(data, status) {
+  console.log(data);
+    $scope.obj=data;
+  })
+})
