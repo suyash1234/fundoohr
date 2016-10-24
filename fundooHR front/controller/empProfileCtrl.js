@@ -1,6 +1,8 @@
-angular.module("myApp").controller("empProfileCtrl", function($scope,$http) {
-  $http.get('apps.json')
-      .then(function(res) {
-          $scope.tables = res.data;
-      })
+angular.module("myApp").controller("empProfileCtrl", function($scope,$rootScope,$http) {
+  // $http.get("http://localhost:3023/firebase/fundoohr").success(function(data, status) {
+  // console.log(data);
+  //   $scope.obj=data;
+  // })
+  $scope.obj=$rootScope.obj["EnggProfile"].sheetData;
+
 });

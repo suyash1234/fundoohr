@@ -9,20 +9,35 @@
                     <table class="table table-bordered table-hover table-striped">
                         <thead>
                             <tr>
-                                <th>Emp ID #</th>
-                                <th>Emp Name</th>
-                                <th>Salary</th>
-                                <th>Date</th>
-                                <th>Time</th>
+                                <th> % Aggr</th>
+                                <th> % Final Year</th>
+                                <th> Degree</th>
+                                <th> Diploma</th>
+                                <th> Discipline</th>
+                                <th> Engg ID</th>
+                                <th> Institute</th>
+                                <th> Name</th>
+                                <th> Sr No</th>
+                                <th> Training</th>
+                                <th> Training Duration</th>
+                                <th> Year Passed</th>
+
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="data in tables">
-                                <td>{{data.emp_id}}</td>
-                                <td>{{data.emp_name}}</td>
-                                <td>{{data.salary}}</td>
-                                <td>{{data.date}}</td>
-                                <td>{{data.time}}</td>
+                            <tr ng-repeat="data in obj">
+                                <td ng-bind="data['% Aggr']"></td>
+                                <td ng-bind="data['% Final Year']"></td>
+                                <td ng-bind="data['Degree']"></td>
+                                <td ng-bind="data['Diploma']"></td>
+                                <td ng-bind="data['Discipline']"></td>
+                                <td ng-bind="data['Engg ID']"></td>
+                                <td ng-bind="data['Institute']"></td>
+                                <td ng-bind="data['Name']"></td>
+                                <td ng-bind="data['Sr No']"></td>
+                                <td ng-bind="data['Training']"></td>
+                                <td ng-bind="data['Training Duration']"></td>
+                                <td ng-bind="data['Year Passed']"></td>
                             </tr>
                         </tbody>
                     </table>

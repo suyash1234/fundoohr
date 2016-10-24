@@ -3,7 +3,7 @@
  * CreatedBy: Suyash
  * purpose : purpose is to decode the data and logout and load the json files
  */
-angular.module("myApp").controller("dashCtrl", function($scope, $location, MyService, $http, $localStorage) {
+angular.module("myApp").controller("dashCtrl", function($scope,$rootScope, $location, MyService, $http, $localStorage) {
     /* make a function logout.This function will work when we submit on logout buttton */
     $scope.table = [];
     $scope.logout = function() {
@@ -21,5 +21,9 @@ angular.module("myApp").controller("dashCtrl", function($scope, $location, MySer
     /* get the emailid using MyService and store in $scope.useremail,
        this is used using binding expression in the html page*/
     $scope.useremail = MyService.getName();
+
+    $http.get("http://localhost:3023/firebase/fundoohr").success(function(data, status) {
+    $rootScope.obj=data;
+    })
 
 });

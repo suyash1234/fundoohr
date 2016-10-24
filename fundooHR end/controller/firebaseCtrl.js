@@ -10,7 +10,7 @@ var firebase=require('../config/firebase.js');
 router.get('/fundoohr', function(req, res) {
 // var firebase = require('../config/firebase1.js');
     console.log("fundoohr data called....");
-     var ref = firebase.database().ref("EnggBankInfo/sheetData");
+     var ref = firebase.database().ref();
     ref.on("value", function(snapshot) {
         // console.log(snapshot.val());
        res.send(snapshot.val());

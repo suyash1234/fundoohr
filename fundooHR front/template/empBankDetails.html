@@ -2,31 +2,31 @@
     <div class="col-lg-12">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Finance</h3>
+                <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Bank Details</h3>
             </div>
             <div class="panel-body">
                 <div class="table-responsive">
                     <table class="table table-bordered table-hover table-striped">
                         <thead>
                             <tr>
+                              <th> Sr No</th>
                               <th> Bank Account Number</th>
                               <th> Bank Name</th>
                               <th> Engg ID</th>
                               <th> IFSC Code</th>
                               <th> Name</th>
                               <th> PAN</th>
-                              <th> Sr No</th>
                             </tr>
                         </thead>
                         <tbody>
                           <tr ng-repeat="data in obj">
-                          <td ng-bind="data['Bank Account Number']"></td>
+                            <td ng-bind="data['Sr No']"></td>
+                            <td ng-bind="data['Bank Account Number']"></td>
                             <td ng-bind="data['Bank Name']"></td>
                             <td ng-bind="data['Engg ID']"></td>
                             <td ng-bind="data['IFSC Code']"></td>
                             <td ng-bind="data['Name']"></td>
                             <td ng-bind="data['PAN']"></td>
-                            <td ng-bind="data['Sr No']"></td>
                           </tr>
                         </tbody>
                     </table>

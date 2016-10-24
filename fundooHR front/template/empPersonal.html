@@ -10,20 +10,36 @@
                     <table class="table table-bordered table-hover table-striped">
                         <thead>
                             <tr>
-                                <th>Emp ID #</th>
-                                <th>Emp Name</th>
-                                <th>Emp Tech</th>
-                                <th>Date</th>
-                                <th>Time</th>
+                              <th> Sr No</th>
+                                <th> Name</th>
+                                <th> Mobile Number</th>
+                                <th> Email Id</th>
+                                <th> Engg ID</th>
+                                <th> Father's Name</th>
+                                <th> Fathers Mobile Number</th>
+                                <th> Mumbai Address</th>
+                                <th> Occupation</th>
+                                <th> Annul Salary</th>
+                                <th> Date of Birth</th>
+                                <th> Permanent Address</th>
+                                <th> Range</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="data in table">
-                                <td>{{data.emp_id}}</td>
-                                <td>{{data.emp_name}}</td>
-                                <td>{{data.emp_tech}}</td>
-                                <td>{{data.date}}</td>
-                                <td>{{data.time}}</td>
+                            <tr ng-repeat="data in obj">
+                              <td ng-bind="data['Sr No']"></td>
+                              <td ng-bind="data['Name']"></td>
+                              <td ng-bind="data['Mobile Number']"></td>
+                              <td ng-bind="data['Email Id']"></td>
+                              <td ng-bind="data['Engg ID']"></td>
+                              <td ng-bind="data['Name']"></td>
+                              <td ng-bind="data['Fathers Mobile Number']"></td>
+                              <td ng-bind="data['Mumbai Address']"></td>
+                              <td ng-bind="data['Occupation']"></td>
+                              <td ng-bind="data['Annul Salary']"></td>
+                              <td ng-bind="data['Date of Birth']"></td>
+                              <td ng-bind="data['Permanent Address']"></td>
+                              <td ng-bind="data['Range']"></td>
                             </tr>
 
                         </tbody>
@@ -35,4 +51,4 @@
             </div>
         </div>
     </div>
-  </div>
+</div>
